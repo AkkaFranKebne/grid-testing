@@ -1,0 +1,46 @@
+/*   -------------------12 kolumnowy grid---------------------*/
+
+@import "media";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.grid-container {
+    width: 100%;
+    max-width: 1500px;
+    .row{
+      padding-bottom: 10px;
+      padding-top: 10px;
+      &:before, //clearfix, bo mamy float
+      &:after {
+        content: " ";
+        display: table; 
+        clear: both;
+        }
+      // ustalanie szerokosci kolumn    
+      @for $i from 1 through 12 {
+            .col-#{$i} {
+            width: 8.333333% * $i;
+        }
+        
+      [class*="col-"] {
+            float: left;
+            min-height: 1px;  //aby puste kolumny na siebie nie nachodzily
+            //padding: 12px;
+             @include mobile {
+                 float: none ;
+                 width: 100% ;   
+            }
+            }
+
+        }  
+    }
+         
+}
+
+
+

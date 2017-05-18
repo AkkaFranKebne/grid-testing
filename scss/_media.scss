@@ -1,0 +1,16 @@
+/*   —————————media w mixin——————————*/
+
+@mixin mobile(){
+    @media (max-width: 650px){
+        @content;
+    }
+}
+
+
+@mixin smallMobile(){
+    @media (max-width: 450px){
+        @content;
+    }
+}
+
+

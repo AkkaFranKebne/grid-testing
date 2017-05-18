@@ -1,0 +1,206 @@
+/*   -------------------glowne style---------------------*/
+
+@import "grid";
+
+
+html {
+    @include smallMobile {
+        font-size: 13px; // zmniejszenie bazy dla rem
+    }
+
+* {
+    color: #3b3a36;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    @include mobile {
+        font-size: 1.4rem;
+    }
+    
+    .header {
+        position: relative;  //dla mobileMenu
+        background-color: #c0dfd9;
+        height: 8rem; 
+        h1 {
+            color: #fff;
+            font-family: 'Graduate', cursive;
+            font-size: 5rem;
+            padding: 1rem;
+            width: 40%;
+            display: inline-block;
+        }
+    }
+    
+    .mobileMenu { 
+        //border: 1px solid red;
+        position:absolute;  //wzgledem header
+        right: 1.1rem;
+        top: 0.5rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .box-left {
+        background-color: #b3c2bf;
+        margin-bottom: 0.1rem;
+        height: 6.18rem;
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 1.1rem;
+        }
+    }
+    .box-right {
+        background-color: #b3c2bf;
+        height: 25rem;
+        p {
+            padding: 1rem;
+            text-indent: 1rem;
+            span {
+                font-family: 'Graduate', cursive;
+                font-weight: bold;
+                font-size: 1.4rem;
+            }
+        }
+        @include mobile  {
+            height: auto; //nie musi juz miec ustalonej wysokosci w mobile
+            margin-top: 0.1rem;
+        }
+
+    }
+    .box-middle {
+        background-color: #c0dfd9;
+        background-image: url(../images/appartment.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 25rem;
+        .line {
+            height: 3rem;
+            width: 100%;
+            position: relative;
+            top: 20rem;
+            left: 0;
+            background-color: rgba(white, 0.8);
+        }
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 0.3rem;
+            padding-right: 0.7rem;
+            text-align: right;
+            
+        }
+    }
+    .gallery {
+        //border: 1px solid red;
+        display: inline-block;
+        height: auto;
+        .bigPhotos {
+            float:none; //aby obrazki nie wyjezdzaly dolem
+            height: auto;
+            //border: 1px solid black;
+                picture {
+                    //border: 1px solid red;
+                    display: inline-block;
+                    height: auto;
+                    padding-left: 3.1vw;
+                    padding-right: 3.1vw;
+                    margin: 0;
+                    text-align: center; //centruje obrazki w wersji mobile
+                    img {
+                        max-height: 100%;
+                        max-width: 100%;
+                        }
+            }            
+        }
+    }
+
+
+    .introduction {
+        background-color: #b3c2bf;
+        height: 3rem;
+        h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: bold;
+            padding: 0.2rem;
+            padding-left: 1rem;        
+     }
+    }
+    .team {
+        height: auto;
+        margin-top: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        align-items:center;
+        align-content: space-around;
+        .mate {
+            margin: 0.1rem;
+            width: 5rem;
+            height: 5rem;
+            -moz-border-radius: 2.5rem;
+            -webkit-border-radius: 2.5rem;
+            border-radius: 2.5rem;
+            background-color: #c0dfd9;  
+            background-image: url(../images/team-picture.jpg);
+            background-repeat: no-repeat;
+            background-color: #c0dfd9;
+        }
+        #abelard {
+            background-position: -35px -70px;
+        }
+         #bernard {
+            background-position: -110px -65px;
+        }
+         #cyprian {
+            background-position: -315px -110px;
+        }
+         #eva {
+            background-position: -510px -60px;
+        }
+         #frank{
+            background-position: -740px -70px;
+        }
+         #gregory {
+            background-position: -950px -60px;
+        }
+         #henry {
+            background-position: -1000px -80px;
+        }
+         #irene {
+            background-position: -850px -100px;
+        }
+         #james {
+            background-position: -560px -120px;
+        }
+         #krystal {
+            background-position: -430px -100px;
+        }
+        
+    }
+.footer,  {
+    background-color: #c0dfd9;
+    height: 3rem;
+    h4 {
+        font-size: 1rem;
+        font-weight: 100;
+        padding: 0.5rem;
+        padding-right: 1rem;
+        text-align: right;
+        span {
+                font-family: 'Graduate', cursive;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+    }
+    
+ }
+}
+}
+
+
+
