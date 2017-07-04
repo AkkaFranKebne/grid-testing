@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     
+    //menu
     var menu = document.querySelector(".menu");
     var mobileMenu = document.querySelector(".mobileMenu");
     
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
     
     function mediaQuery(){
-        
+        //ukrywanie menu dla najmniejszych mobilek
         if (smallMobile.matches){
             console.log("smallMobile");
             menu.style.display = "none";
